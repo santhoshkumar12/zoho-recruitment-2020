@@ -1,0 +1,42 @@
+#include<stdio.h>
+#include<string.h>
+int main()
+{
+    char ch[500];
+    int i,j,c,n;
+    printf("Enter a word:");
+    scanf("%s",ch);
+    n=strlen(ch);
+    c=n/2;
+    for(i=0;i<n;i++)
+    {
+    for(j=n-1;j>i;j--)
+    {
+       printf(" ");
+        
+    }
+    for(j=c;j<=c+i&&j<n;j++)
+    {
+        printf("%c",ch[j]);
+    }
+        if(i>c)
+        {
+            for(j=0;j<i-c;j++)
+            {
+                printf("%c",ch[j]);
+            }
+        }
+        printf("\n");
+        }
+    return 0;
+}
+OUTPUT:
+
+Enter a word:welcome
+      c
+     co
+    com
+   come
+  comew
+ comewe
+comewel
